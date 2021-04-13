@@ -3,7 +3,7 @@ from pages.modal_window import ModalWindow
 from pages.main_page import MainPage
 
 
-def test_if_the_button_present(browser):
+def test_modal_window(browser):
     main_page = MainPage(browser)
     modal_window = ModalWindow(browser)
     main_page.load(URLS["BASE_URL"])

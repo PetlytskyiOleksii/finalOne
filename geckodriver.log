@@ -1,0 +1,33 @@
+1618321523942	geckodriver	INFO	Listening on 127.0.0.1:62141
+1618321526951	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\OPETLY~1\\AppData\\Local\\Temp\\rust_mozprofilehDefkl"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618321529819	Marionette	INFO	Listening on port 62151
+1618321530281	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://extrit.by/, line 177: ReferenceError: Typed is not defined
+1618321571275	Marionette	INFO	Stopped listening on port 62151
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618321578882	geckodriver	INFO	Listening on 127.0.0.1:62271
+1618321581896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\OPETLY~1\\AppData\\Local\\Temp\\rust_mozprofile6qxwlZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618321584265	Marionette	INFO	Listening on port 62281
+1618321584519	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://extrit.by/, line 177: ReferenceError: Typed is not defined
+1618321609041	Marionette	INFO	Stopped listening on port 62281
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618323096543	geckodriver	INFO	Listening on 127.0.0.1:63459
+1618323099565	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\OPETLY~1\\AppData\\Local\\Temp\\rust_mozprofileZygoas"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618323101903	Marionette	INFO	Listening on port 63469
+1618323102189	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://extrit.by/, line 177: ReferenceError: Typed is not defined
+Marionette threw an error: TypeError: this.curBrowser.contentBrowser is null
+GeckoDriver.prototype.navigateTo@chrome://marionette/content/driver.js:1010:3
+
+1618323117251	Marionette	INFO	Stopped listening on port 63469
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
