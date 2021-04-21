@@ -2,14 +2,13 @@ import json
 import pytest
 import platform
 from selenium import webdriver
-from constants.supported_browsers import SUPPORTED_BROWSERS, CHROME_BROWSER, FIREFOX_BROWSER
+from constants import supported_browsers
 from constants.supported_platforms import SUPPORTED_PLATFORMS, LINUX_PLATFORM, WINDOWS_PLATFORM, IOS_PLATFORM
 
 
 @pytest.fixture
 def define_platform():
     if platform.system() not in SUPPORTED_PLATFORMS:
-        print(platform.system())
         raise Exception("this platform is not supporting")
     return platform.system()
 
@@ -25,7 +24,7 @@ def config():
 def config_browser(config):
     if "browser" not in config:
         raise Exception("browser is required")
-    if config["browser"] in SUPPORTED_BROWSERS:
+    if config["browser"] in supported_browsers.SUPPORTED_BROWSERS:
         return config["browser"]
     raise Exception("browser is not supported")
 
@@ -43,12 +42,12 @@ def config_wait_time(config):
 
 @pytest.fixture
 def browser(config_browser, config_wait_time, define_platform):
-    if config_browser == CHROME_BROWSER:
+    if config_browser == supported_browsers.CHROME_BROWSER:
         if define_platform == WINDOWS_PLATFORM:
             driver = webdriver.Chrome(executable_path="C:\\Users\\opetlytskyi\\PycharmProjects\\finalProject\\drivers\\chromedriverWin.exe")
         elif define_platform == IOS_PLATFORM:
             driver = webdriver.Chrome(executable_path="/Users/opetlytskyi/finalProject/drivers/chromedriver")
-    elif config_browser == FIREFOX_BROWSER:
+    elif config_browser == supported_browsers.FIREFOX_BROWSER:
         if define_platform == WINDOWS_PLATFORM:
             driver = webdriver.Firefox(executable_path="C:\\Users\\opetlytskyi\\PycharmProjects\\finalProject\\drivers\\firefoxdriverWin.exe")
         elif define_platform == IOS_PLATFORM:

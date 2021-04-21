@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 
-class ModalWindow:
+class TariffModalWindow:
 
     @staticmethod
     def CURRENT_STEP_LABEL(step):
@@ -18,20 +18,20 @@ class ModalWindow:
     def __init__(self, browser):
         self.browser = browser
 
-    def to_check_modal_window_shows(self):
+    def check_modal_window_shows(self):
         modal_window = self.browser.find_element(*self.MODAL_WINDOW)
         return modal_window.is_displayed()
 
-    def to_check_current_step(self, step):
-        current_step_label = self.browser.find_element(*ModalWindow.CURRENT_STEP_LABEL(step))
+    def check_current_step(self, step):
+        current_step_label = self.browser.find_element(*TariffModalWindow.CURRENT_STEP_LABEL(step))
         return current_step_label.text
 
-    def to_check_next_step_button_present(self):
+    def check_next_step_button_present(self):
         next_step_button = self.browser.find_element(*self.NEXT_STEP_BUTTON)
         return next_step_button.is_displayed()
 
     def select_the_first_option(self, amount):
-        first_option_checkbox = self.browser.find_element(*ModalWindow.CHECKBOX(amount))
+        first_option_checkbox = self.browser.find_element(*TariffModalWindow.CHECKBOX(amount))
         first_option_checkbox.click()
 
     def click_next_step_button(self):
