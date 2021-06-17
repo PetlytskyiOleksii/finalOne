@@ -23,7 +23,7 @@ class Pages:
         return order_site_modal_window.is_displayed()
 
     def click_order_button(self):
-        order_button = self.browser.find_element(*Pages.ORDER_BUTTON)
+        order_button = self.find_element(*Pages.ORDER_BUTTON, 10)
         order_button.click()
 
     def check_required_fields_warnings_show(self):

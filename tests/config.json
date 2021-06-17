@@ -1,4 +1,5 @@
 {
   "browser": "Chrome",
-  "wait_time": 10
+  "wait_time": 10,
+  "useRemoteWebDriver": true
 }
