@@ -11,6 +11,7 @@ class Pages:
     ORDER_SITE_MODAL_WINDOW = (By.XPATH, "//div[@id='formZ' and @style='display: block;']")
     SUCCESS_ORDER_BLOCK = (By.XPATH, "//div[@id='formZ']//div[contains(@class, 'successbox')]")
 
+    # протестировать как элемент!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     @staticmethod
     def REQUIRED_FIELD_WARNING():
         return By.XPATH, "//div[text()='Это поле обязательно для заполнения']"
