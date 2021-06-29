@@ -28,8 +28,8 @@ users = [
 # print(salary)
 
 # 1.1 reduce
-salaries = reduce(lambda sum_salary, user: sum_salary + user["salary"], filter(lambda user: user["age"] > 20, users), 0)
-print(salaries)
+# salaries = reduce(lambda sum_salary, user: sum_salary + user["salary"], filter(lambda user: user["age"] > 20, users), 0)
+# print(salaries)
 
 
 # 2 Преобразовать этот список в список строк вида "Lesha earns 1500$"
@@ -39,8 +39,8 @@ print(salaries)
 # print(new_list)
 
 # 2.1
-new_list = list(map(lambda user: user["name"] + " earns " + str(user["salary"]), users))
-print(new_list)
+# new_list = list(map(lambda user: user["name"] + " earns " + str(user["salary"]), users))
+# print(new_list)
 
 # 3. Преобразовать текущий список в новый список пользователей, каждый элемент которого состоит из 2 полей: name, salary
 # Если у пользователя есть бонус, то его зарплата должна быть увеличена на 20%, иначе она должна остаться без изменений
@@ -50,11 +50,16 @@ print(new_list)
 # print(new_list)
 
 # 3.1
-new_list = map(lambda person: {"name": person["name"], "salary": person["salary"] * 1.2}, filter(lambda person: person["hasBonus"], users))
-print(list(new_list))
+# new_list = map(lambda person: {"name": person["name"], "salary": person["salary"] * 1.2}, filter(lambda person: person["hasBonus"], users))
+# print(list(new_list))
 
 
-test = reduce(lambda sum_salary, user: sum_salary + user["salary"], filter(lambda user: user["name"] == 'Oleg2', users), 0)
-print(test)
+# test = reduce(lambda sum_salary, user: sum_salary + user["salary"], filter(lambda user: user["name"] == 'Oleg2', users), 0)
+# print(test)
 # можно ли решить эту задачу без filter???
-# print(reduce(accum_salary, users, 0))
+
+
+for user in users:
+    if user["name"] == 'Oleg2':
+        test = reduce((lambda sum_salary: sum_salary + user["salary"]), users)
+        print(test)
