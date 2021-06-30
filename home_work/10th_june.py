@@ -59,7 +59,4 @@ users = [
 # можно ли решить эту задачу без filter???
 
 
-for user in users:
-    if user["name"] == 'Oleg2':
-        test = reduce((lambda sum_salary: sum_salary + user["salary"]), users)
-        print(test)
+test = reduce(lambda sum_salary, user: sum_salary + user["salary"] if user["name"] == 'Oleg2' else sum_salary, users, 0)
