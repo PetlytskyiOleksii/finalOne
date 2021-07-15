@@ -1,3 +1,3 @@
 URLS = {
-    "BASE_URL": "https://extrit.by/"
+    "BASE_URL": "https://wl.biflow.co/"
 }

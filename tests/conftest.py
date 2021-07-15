@@ -20,15 +20,6 @@ def config():
         return config_data
 
 
-# @pytest.fixture
-# def userRemoteWebDriver(config):
-#     if config['userRemoteWebDriver']:
-#         return True
-#     if not config['userRemoteWebDriver']:
-#         return False
-#     raise Exception("Remote web driver config is incorrect")
-
-
 @pytest.fixture
 def config_browser(config):
     if "browser" not in config:
