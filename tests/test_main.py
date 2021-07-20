@@ -1,36 +1,37 @@
 from constants import urls
 from constants.urls import URLS
 from pages.pages import Pages
-from pages.stim_modal_window import StimModalWindow
-from pages.page import Page
+from pages.main_page import MainPage
 import pytest
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_login(browser):
-    page = Page(browser)
-    page.go_to_url(URLS["BASE_URL"])
-    assert page.check_if_login_button_is_present(), " כניסת משתמשים "
-    page.click_login_button()
-    assert page.check_input_name_field_shows(), "login window is not present"
-    page.input_name("petlytslyi")
-    page.input_password("Manchester17")
-    page.click_submit_login_button()
+    main_page = MainPage(browser)
+    main_page.go_to_url(URLS["BASE_URL"])
+    assert main_page.check_if_login_button_is_present(), " כניסת משתמשים "
+    main_page.click_login_button()
+    assert main_page.check_input_name_field_shows(), "login window is not present"
+    main_page.input_name("petlytslyi")
+    main_page.input_password("Manchester17")
+    main_page.click_submit_login_button()
+
     while True:
         pass
 
 
+@pytest.mark.skip
 def test_registration(browser):
-    page = Page(browser)
-    page.go_to_url(URLS["BASE_URL"])
-    page.click_registration_button()
+    main_page = MainPage(browser)
+    main_page.go_to_url(URLS["BASE_URL"])
+    main_page.click_registration_button()
     while True:
         pass
 
 
 @pytest.mark.skip
 def test_order_selling_site_modal_window(browser):
-    page = Page(browser)
+    page = MainPage(browser)
     pages = Pages(browser)
     page.go_to_url(urls.URLS["BASE_URL"])
     page.scroll_page()
