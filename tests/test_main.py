@@ -5,7 +5,7 @@ from pages.main_page import MainPage
 import pytest
 
 
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_login(browser):
     main_page = MainPage(browser)
     main_page.go_to_url(URLS["BASE_URL"])
@@ -15,9 +15,7 @@ def test_login(browser):
     main_page.input_name("petlytslyi")
     main_page.input_password("Manchester17")
     main_page.click_submit_login_button()
-
-    while True:
-        pass
+    assert not main_page.check_input_name_field_shows(), "login window is present"
 
 
 @pytest.mark.skip

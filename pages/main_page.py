@@ -76,4 +76,3 @@ class MainPage:
 
     def scroll_page(self):
         self.browser.find_element_by_tag_name('body').send_keys(Keys.END)
-
